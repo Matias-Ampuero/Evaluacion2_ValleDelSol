@@ -1,0 +1,15 @@
+services:
+  db-postgres:
+    image: postgres:15
+    container_name: vallesol_db
+    environment:
+      POSTGRES_USER: admin_vallesol
+      POSTGRES_PASSWORD: SecurePass2026!
+      POSTGRES_DB: db_incendios_forestales
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
