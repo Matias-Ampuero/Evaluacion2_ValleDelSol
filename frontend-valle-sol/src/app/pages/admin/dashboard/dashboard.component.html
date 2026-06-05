@@ -1,0 +1,177 @@
+<main class="fade-in">
+    <div style="margin-bottom: 25px;">
+        <h1 style="font-size: 2rem; font-weight: 800; margin: 0;">Municipalidad Valle Del Sol <span
+                class="text-emerald-neon">GIS</span></h1>
+        <p style="color: #94a3b8; font-size: 0.9rem;">Monitoreo asíncrono y evaluación de riesgo forestal en Valle del
+            Sol.</p>
+    </div>
+
+    <div class="kpi-row">
+        <div class="glass-card-pro" style="padding: 20px; border-top: 3px solid #10b981;">
+            <p
+                style="color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; margin: 0 0 10px 0;">
+                <span class="text-emerald-neon">Total Reportes</span>
+            </p>
+            <h2 style="font-size: 2.2rem; margin: 0; font-weight: 800;">1,248 <span
+                    style="font-size: 0.9rem; color: #34d399; font-weight: normal;">↑ 12%</span></h2>
+        </div>
+        <div class="glass-card-pro" style="padding: 20px; border-top: 3px solid #ef4444;">
+            <p
+                style="color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; margin: 0 0 10px 0;">
+                <span class="text-emerald-neon">Focos Criticos</span>
+            </p>
+            <h2 style="font-size: 2.2rem; margin: 0; font-weight: 800;">4 <span
+                    style="font-size: 0.9rem; color: #ef4444; font-weight: normal;">Activos</span></h2>
+        </div>
+        <div class="glass-card-pro" style="padding: 20px; border-top: 3px solid #3b82f6;">
+            <p
+                style="color: #94a3b8; font-size: 0.75rem; text-transform: uppercase; font-weight: bold; margin: 0 0 10px 0;">
+                <span class="text-emerald-neon">Tiempo De Respuesta</span>
+            </p>
+            <h2 style="font-size: 2.2rem; margin: 0; font-weight: 800;">14.2m <span
+                    style="font-size: 0.9rem; color: #34d399; font-weight: normal;">Óptimo</span></h2>
+        </div>
+    </div>
+
+    <div class="dash-grid">
+        <div class="glass-card-pro" style="padding: 25px;">
+            <h3 style="margin: 0 0 20px 0; font-size: 1rem; color: #fff;">Tendencia de Alertas (Últimos 7 días)</h3>
+            <div class="apex-line-container">
+                <svg viewBox="0 0 500 150" style="width: 100%; height: 100%; overflow: visible;"
+                    preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+                            <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M0,130 Q50,80 100,100 T200,60 T300,90 T410,35 L500,70 L500,150 L0,150 Z"
+                        fill="url(#chartGrad)" style="pointer-events: none;"></path>
+                    <path d="M0,130 Q50,80 100,100 T200,60 T300,90 T410,35 L500,70" fill="none" stroke="#10b981"
+                        stroke-width="3"
+                        style="filter: drop-shadow(0px 4px 6px rgba(16,185,129,0.5)); pointer-events: none;"></path>
+
+                    <circle cx="0" cy="127" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🔥 Foco Menor', '08:15 hrs', '0%', 0)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="-5" y="112" fill="#f44336" font-size="10" font-weight="bold" text-anchor="start"
+                        style="pointer-events: none;">0%</text>
+
+                    <circle cx="90" cy="97" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point"
+                        (mouseenter)="showTooltip($event, '🌊 Desborde Río', '10:30 hrs', '35%', 89)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="95" y="82" fill="#FFFF00" font-size="10" font-weight="bold" text-anchor="middle"
+                        style="pointer-events: none;">35%</text>
+
+                    <circle cx="170" cy="90" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🚓 Asistencia', '11:45 hrs', '42%', 105)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="175" y="75" fill="#10b981" font-size="10" font-weight="bold" text-anchor="middle"
+                        style="pointer-events: none;">42%</text>
+
+                    <circle cx="250" cy="39" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🌋 Sismo Magnitud 5.2', '14:50 hrs', '85%', 142)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="255" y="22" fill="#10b981" font-size="12" font-weight="800" text-anchor="middle"
+                        style="pointer-events: none;">85%</text>
+
+                    <circle cx="330" cy="123" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🔥 Foco Menor', '16:20 hrs', '18%', 62)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="335" y="108" fill="#f44336" font-size="10" font-weight="bold" text-anchor="middle"
+                        style="pointer-events: none;">18%</text>
+
+                    <circle cx="410" cy="35" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🔥 Incendio Mayor', '18:00 hrs', '92%', 210)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="415" y="18" fill="#10b981" font-size="12" font-weight="800" text-anchor="middle"
+                        style="pointer-events: none;">92%</text>
+
+                    <circle cx="500" cy="70" r="8" fill="#0f172a" stroke="#10b981" stroke-width="2"
+                        class="interactive-point neon-shadow"
+                        (mouseenter)="showTooltip($event, '🌊 Alerta Crecida', '21:10 hrs', '60%', 120)"
+                        (mouseleave)="hideTooltip()"></circle>
+                    <text x="515" y="55" fill="#10b981" font-size="10" font-weight="bold" text-anchor="end"
+                        style="pointer-events: none;">60%</text>
+                </svg>
+                <div
+                    style="display: flex; justify-content: space-between; font-size: 0.7rem; color: #64748b; margin-top: 10px; font-weight: bold;">
+                    <span>LUN</span><span>MAR</span><span>MIE</span><span>JUE</span><span>VIE</span><span>SAB</span><span>DOM</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="glass-card-pro" style="padding: 25px; display: flex; flex-direction: column;">
+            <h3 style="margin: 0 0 20px 0; font-size: 1rem; color: #fff;">Orígenes de Reporte</h3>
+            <div class="apex-donut-container">
+                <svg viewBox="0 0 36 36" style="width: 150px; height: 150px; transform: rotate(-90deg);">
+                    <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#1e293b" stroke-width="4"></circle>
+                    <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#10b981" stroke-width="4"
+                        stroke-dasharray="65 35"></circle>
+                    <circle cx="18" cy="18" r="15.915" fill="transparent" stroke="#3b82f6" stroke-width="4"
+                        stroke-dasharray="25 75" stroke-dashoffset="-65"></circle>
+                </svg>
+                <div style="position: absolute; text-align: center;">
+                    <span style="display: block; font-size: 1.5rem; font-weight: 800; color: #fff;">65%</span>
+                    <span style="font-size: 0.65rem; color: #94a3b8; text-transform: uppercase;">App Vecino</span>
+                </div>
+            </div>
+            <div
+                style="display: flex; justify-content: center; gap: 15px; margin-top: auto; font-size: 0.75rem; color: #94a3b8;">
+                <span style="display: flex; align-items: center; gap: 5px;">
+                    <div style="width:8px;height:8px;background:#10b981;border-radius:50%;"></div> App Vecino
+                </span>
+                <span style="display: flex; align-items: center; gap: 5px;">
+                    <div style="width:8px;height:8px;background:#3b82f6;border-radius:50%;"></div> SENAPRED
+                </span>
+                <span style="display: flex; align-items: center; gap: 5px;">
+                    <div style="width:8px;height:8px;background:#1e293b;border-radius:50%;"></div> No reportadas
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="glass-card-pro" style="padding: 0; overflow: hidden;">
+        <div
+            style="padding: 20px; border-bottom: 1px solid rgba(250,255,255,0.05); display: flex; justify-content: space-between; align-items: center;">
+            <h3 style="margin: 0; font-size: 1rem; color: #fff;">Customer List / Últimos Reportes</h3>
+            <input type="text" placeholder="🔍 Buscar ID..."
+                style="background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.1); padding: 6px 12px; border-radius: 6px; color: white; font-size: 0.8rem; outline: none;">
+        </div>
+        <table class="primeng-table">
+            <thead>
+                <tr>
+                    <th>ID Alerta</th>
+                    <th>Ubicación / Referencia</th>
+                    <th>Categoría</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let m of mockHistorial">
+                    <td style="font-family: monospace; color: #34d399; font-weight: bold;">{{ m.id }}</td>
+                    <td style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 1.2rem;">{{ m.emoji }}</span> {{ m.dir }}
+                    </td>
+                    <td>{{ m.tipo }}</td>
+                    <td><span
+                            style="background: rgba(16,185,129,0.1); color: #34d399; padding: 4px 8px; border-radius: 12px; font-size: 0.7rem; border: 1px solid rgba(16,185,129,0.3);">Procesado</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</main>
+
+<div *ngIf="tooltipVisible" class="custom-tooltip" [style.left.px]="tooltipX" [style.top.px]="tooltipY">
+    <h4>{{ tooltipData.catastrofe }}</h4>
+    <p><span class="label">Hora:</span> <span class="val">{{ tooltipData.hora }}</span></p>
+    <p><span class="label">Tasa de Reporte:</span> <span class="val">{{ tooltipData.porcentaje }}</span></p>
+    <p><span class="label">Cantidad:</span> <span class="qty">{{ tooltipData.cantidad }}</span></p>
+</div>

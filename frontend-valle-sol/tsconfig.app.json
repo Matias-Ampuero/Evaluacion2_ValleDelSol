@@ -10,7 +10,7 @@
   },
   "include": [
     "src/**/*.ts"
-  ],
+, "src/app/pages/admin/dashboard/dashboard.component.hml"  ],
   "exclude": [
     "src/**/*.spec.ts"
   ]
